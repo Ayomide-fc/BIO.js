@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomide Abiodun | Developer + Creative</title>
+    <meta name="description" content="The portfolio of Ayomide Abiodun — developer, creative coder, designer and video editor building interactive digital experiences.">
+    <meta name="theme-color" content="#080808">
+    <meta property="og:title" content="Ayomide Abiodun | Developer + Creative">
+    <meta property="og:description" content="Portfolio and case studies by Ayomide Abiodun, exploring development, design, and creative technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23080808'/%3E%3Ctext x='120' y='300' fill='%23a855f7' font-size='120' font-family='Arial, sans-serif' font-weight='700'%3EA.%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080808'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='34' font-family='Arial, sans-serif' font-weight='700' fill='%23a855f7'%3EA%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loader" id="loader" aria-live="polite">
+        <div class="loader-content">
+            <div class="loader-logo">A<span>.</span></div>
+            <div class="loader-text">INITIALIZING<span class="dots">...</span></div>
+            <div class="loader-line"><div class="loader-progress"></div></div>
+            <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
+        </div>
+    </div>
+
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+
+    <div class="background" aria-hidden="true">
+        <div class="grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <canvas id="particles"></canvas>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true">
+        <div id="scrollProgress"></div>
+    </div>
+
+    <header class="navbar">
+        <a href="#home" class="logo">A<span>.</span></a>
+
+        <nav id="navMenu" aria-label="Main navigation">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#life" class="nav-link">Life</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" type="button">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="menuToggle" class="menu-btn" aria-label="Toggle menu" type="button">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="hero-content reveal">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Available for interesting projects</span>
+                </div>
+
+                <p class="eyebrow">HELLO, I'M</p>
+
+                <h1>
+                    Ayomide
+                    <span>Abiodun</span>
+                </h1>
+
+                <div class="hero-title" aria-live="polite">
+                    <span class="static-prefix">I’m a</span>
+                    <span class="typing" id="typing"></span>
+                    <span class="typing-cursor" aria-hidden="true">|</span>
+                </div>
+
+                <p class="hero-description">
+                    A Computer Science student, developer, and creative builder who turns ideas into polished digital experiences that feel useful, intentional, and memorable.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary magnetic">Explore my work <i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="#contact" class="btn btn-secondary magnetic">Let's talk <i class="fa-regular fa-paper-plane"></i></a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/Ayomide-fc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/ayo_mi009" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@ayo_mi1112" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal" aria-hidden="true">
+                <div class="profile-orbit">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="profile-card">
+                        <div class="card-top">
+                            <span>AYO</span>
+                            <span class="card-dot">●</span>
+                        </div>
+
+                        <div class="profile-symbol">A<span>.</span></div>
+                        <div class="profile-name">AYOMIDE</div>
+                        <div class="profile-role">DEVELOPER / CREATOR</div>
+                    </div>
+
+                    <div class="floating-tag tag-one">&lt;/&gt;</div>
+                    <div class="floating-tag tag-two">✦</div>
+                    <div class="floating-tag tag-three">JS</div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>WEB DEVELOPMENT</span>
+                <span>✦</span>
+                <span>VIDEO EDITING</span>
+                <span>✦</span>
+                <span>GRAPHIC DESIGN</span>
+                <span>✦</span>
+                <span>CREATIVE TECHNOLOGY</span>
+                <span>✦</span>
+                <span>WEB DEVELOPMENT</span>
+                <span>✦</span>
+                <span>VIDEO EDITING</span>
+                <span>✦</span>
+                <span>GRAPHIC DESIGN</span>
+                <span>✦</span>
+                <span>CREATIVE TECHNOLOGY</span>
+                <span>✦</span>
+            </div>
+        </div>
+
+        <section id="about" class="section about">
+            <div class="section-heading reveal">
+                <span class="section-number">01</span>
+                <span class="section-label">ABOUT ME</span>
+                <h2>More than just <span>a developer.</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-main reveal">
+                    <p class="big-text">I'm <strong>Ayomide</strong>, but most people call me <strong>Ayo</strong>.</p>
+                    <p>I'm a 17-year-old Computer Science student at Ahmadu Bello University, Kaduna. I enjoy building things for the web, editing videos, designing graphics, and generally experimenting with technology.</p>
+                    <p>I'm the kind of person who can start with a random idea at midnight and somehow end up building an entire project around it.</p>
+                    <p>I like technology because it gives me a way to turn imagination into something real.</p>
+                </div>
+
+                <div class="about-stats reveal">
+                    <div class="stat-card"><span class="stat-number" data-target="17">0</span><span class="stat-label">YEARS OLD</span></div>
+                    <div class="stat-card"><span class="stat-number" data-target="3">0</span><span class="stat-label">CREATIVE FIELDS</span></div>
+                    <div class="stat-card"><span class="stat-number" data-target="10">0</span><span class="stat-label">PROJECT IDEAS</span></div>
+                    <div class="stat-card"><span class="stat-number" data-target="1">0</span><span class="stat-label">BIG GOAL</span></div>
+                </div>
+            </div>
+
+            <div class="journey reveal">
+                <div class="journey-item">
+                    <span class="journey-step">01</span>
+                    <div>
+                        <h3>Education</h3>
+                        <p>Computer Science student at Ahmadu Bello University, building a foundation in technology while creating digital work on the side.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <span class="journey-step">02</span>
+                    <div>
+                        <h3>Development</h3>
+                        <p>Designing and coding front-end experiences with strong focus on interaction, polish, and usability.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <span class="journey-step">03</span>
+                    <div>
+                        <h3>Creative work</h3>
+                        <p>Video editing, motion design, branding, and visual storytelling that support the design language behind my projects.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <span class="journey-step">04</span>
+                    <div>
+                        <h3>Current focus</h3>
+                        <p>Creating useful and expressive projects that balance utility, personality, and honest problem-solving.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services">
+            <div class="section-heading reveal">
+                <span class="section-number">02</span>
+                <span class="section-label">WHAT I DO</span>
+                <h2>Different skills. <span>Same curiosity.</span></h2>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <span class="service-number">01</span>
+                    <h3>Web Development</h3>
+                    <p>I build interactive websites and web experiences with a focus on clean interfaces, animations and usability.</p>
+                    <div class="service-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+                    <span class="service-number">02</span>
+                    <h3>Video Editing</h3>
+                    <p>I enjoy turning raw clips into engaging edits using timing, music, transitions and effects.</p>
+                    <div class="service-tags"><span>Editing</span><span>Motion</span><span>Storytelling</span></div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <span class="service-number">03</span>
+                    <h3>Graphic Design</h3>
+                    <p>I create visual concepts, social graphics, posters and digital designs.</p>
+                    <div class="service-tags"><span>Design</span><span>Branding</span><span>Visuals</span></div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <span class="service-number">04</span>
+                    <h3>Creative Projects</h3>
+                    <p>I like combining technology and creativity to make projects that feel different from ordinary websites.</p>
+                    <div class="service-tags"><span>Ideas</span><span>UI/UX</span><span>Experiments</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="section-heading reveal">
+                <span class="section-number">03</span>
+                <span class="section-label">SKILLS</span>
+                <h2>Things I'm <span>building with.</span></h2>
+            </div>
+
+            <div class="skills-layout">
+                <div class="skills-intro reveal">
+                    <h3>Always learning.<br>Never finished.</h3>
+                    <p>Technology changes quickly, so I don't want to stop at the things I already know.</p>
+                    <div class="learning-badge"><span class="pulse"></span>Currently learning</div>
+                </div>
+
+                <div class="skills-list reveal">
+                    <div class="skill"><div class="skill-info"><span>HTML / CSS</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+                    <div class="skill"><div class="skill-info"><span>JavaScript</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div></div>
+                    <div class="skill"><div class="skill-info"><span>UI / UX</span><span>82%</span></div><div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div></div>
+                    <div class="skill"><div class="skill-info"><span>Video Editing</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
+                    <div class="skill"><div class="skill-info"><span>Graphic Design</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div></div>
+                    <div class="skill"><div class="skill-info"><span>Git / GitHub</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="section-heading reveal">
+                <span class="section-number">04</span>
+                <span class="section-label">SELECTED WORK</span>
+                <h2>Things I've <span>built.</span></h2>
+            </div>
+
+            <div class="project-filters reveal" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all" type="button">All</button>
+                <button class="filter-btn" data-filter="development" type="button">Development</button>
+                <button class="filter-btn" data-filter="design" type="button">Design</button>
+                <button class="filter-btn" data-filter="creative" type="button">Creative</button>
+                <button class="filter-btn" data-filter="experiments" type="button">Experiments</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid"></div>
+        </section>
+
+        <section id="life" class="section life">
+            <div class="section-heading reveal">
+                <span class="section-number">05</span>
+                <span class="section-label">BEYOND CODE</span>
+                <h2>The person <span>behind the screen.</span></h2>
+            </div>
+
+            <div class="life-grid">
+                <div class="life-card reveal"><div class="life-icon">🎮</div><h3>Gaming</h3><p>Sports games, open-world games, arcade games and basically anything that looks fun enough to make me say “one more match.”</p></div>
+                <div class="life-card reveal"><div class="life-icon">🎧</div><h3>Music</h3><p>I'm not really locked into one genre. If it sounds good, it gets a place in the playlist.</p></div>
+                <div class="life-card reveal"><div class="life-icon">📚</div><h3>Reading</h3><p>Books are another way I explore ideas, perspectives and stories outside of technology.</p></div>
+                <div class="life-card reveal"><div class="life-icon">💡</div><h3>Creating</h3><p>I enjoy taking an idea that exists only in my head and turning it into something visible.</p></div>
+            </div>
+
+            <div class="personality reveal">
+                <div class="personality-main">
+                    <span class="mini-label">PERSONALITY</span>
+                    <h3>Curious. Creative. <span>Persistent.</span></h3>
+                    <p>I'm naturally curious and I like figuring things out for myself. I can get seriously invested in something once it catches my attention, especially when I'm building or creating something.</p>
+                </div>
+                <div class="personality-pills"><span>Curious</span><span>Creative</span><span>Ambitious</span><span>Experimental</span><span>Problem Solver</span><span>Always Learning</span></div>
+            </div>
+        </section>
+
+        <section class="section passion">
+            <div class="passion-box reveal">
+                <div class="passion-number">06</div>
+                <span class="mini-label">WHAT I'M PASSIONATE ABOUT</span>
+                <h2>Turning ideas <span>into experiences.</span></h2>
+                <p>I'm passionate about technology, creativity and building things that people can actually experience. Whether that's a website, an edit, a design or a completely random project idea, I enjoy the process of making something from nothing.</p>
+                <div class="passion-line"></div>
+                <div class="passion-quote">"Imagine it. Build it. Improve it."</div>
+            </div>
+        </section>
+
+        <section class="section currently">
+            <div class="currently-card reveal">
+                <div class="currently-header">
+                    <span class="mini-label">RIGHT NOW</span>
+                    <span class="live"><span></span>LIVE</span>
+                </div>
+
+                <div class="currently-content">
+                    <h2>What I'm up to</h2>
+                    <div class="currently-items">
+                        <div class="current-item"><span>01</span><div><strong>Studying Computer Science</strong><p>Ahmadu Bello University</p></div></div>
+                        <div class="current-item"><span>02</span><div><strong>Building web projects</strong><p>Experimenting with JavaScript, UI and interactive experiences.</p></div></div>
+                        <div class="current-item"><span>03</span><div><strong>Improving creatively</strong><p>Editing, design, motion and digital content.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="contact-container reveal">
+                <span class="mini-label">07 / CONTACT</span>
+                <h2>Got an idea? <span>Let's build it.</span></h2>
+                <p>Whether it's a website, creative project, collaboration or just a conversation about something interesting — I'm always open to new ideas.</p>
+
+                <div class="contact-actions">
+                    <button class="contact-email magnetic" id="copyEmail" type="button">
+                        <span><i class="fa-regular fa-copy"></i> Copy my contact</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <a class="contact-link" href="mailto:Ayomideabiodun.com2009@gmail.com" target="_blank" rel="noopener noreferrer">Email me</a>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/Ayomideabiodun.com2009@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New portfolio enquiry">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="contact-field-row">
+                        <label class="contact-field">
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="you@example.com" required>
+                        </label>
+                    </div>
+
+                    <label class="contact-field">
+                        <span>Project / idea</span>
+                        <textarea name="message" placeholder="Tell me what you want to build..." rows="5" required></textarea>
+                    </label>
+
+                    <button type="submit" class="contact-submit">Send enquiry</button>
+                </form>
+
+                <div class="social-grid">
+                    <a href="https://github.com/Ayomide-fc" target="_blank" rel="noopener noreferrer" class="social-card"><i class="fa-brands fa-github"></i><div><strong>GitHub</strong><span>Ayomide-fc</span></div><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://instagram.com/ayo_mi009" target="_blank" rel="noopener noreferrer" class="social-card"><i class="fa-brands fa-instagram"></i><div><strong>Instagram</strong><span>@ayo_mi009</span></div><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://tiktok.com/@ayo_mi1112" target="_blank" rel="noopener noreferrer" class="social-card"><i class="fa-brands fa-tiktok"></i><div><strong>TikTok</strong><span>Á.y</span></div><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">A<span>.</span></div>
+        <p>Designed & built by Ayomide Abiodun.</p>
+        <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Contact copied!</div>
+
+    <div class="project-modal hidden" id="projectModal" aria-hidden="true">
+        <div class="project-modal__backdrop" data-close-modal="true"></div>
+        <div class="project-modal__panel" role="dialog" aria-modal="true" aria-labelledby="projectTitle">
+            <button class="project-modal__close" type="button" aria-label="Close project details">×</button>
+            <div id="projectModalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
